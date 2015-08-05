@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.container
+      div.row
+          div.text-center
+              | 搜索音乐名称
+      br
+      div.row
+          form(action="search")
+              div.input-group
+                  input#music.form-control(type=text, placeholder="输入你想搜索的音乐名称", name="music")
+                  span.input-group-btn
+                      button#search.btn(type=submit)
+                          | 搜索

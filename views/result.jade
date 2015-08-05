@@ -1,0 +1,18 @@
+//
+   Created by kliu on 05/08/2015.
+
+extends layout
+
+block content
+    div.container
+            if error
+                div.row
+                    | #{error}
+            else
+                ul.list-group
+                    each music in found
+                        li.group-list-item
+                            a(href="#{music.download}")
+                                | #{music.file}
+
+
